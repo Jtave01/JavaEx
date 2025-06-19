@@ -1,0 +1,41 @@
+package motorista;
+import carro.Carro;
+import java.util.Scanner;
+public class Motorista {
+	private final static Scanner scanner = new Scanner(System.in);
+	private final static Carro carro = new Carro();
+	
+	public static void main(String[] args) {
+		var option = -1;
+		do {
+			System.out.println("        ______\r\n"
+					+ "       /|_||_\\`.__\r\n"
+					+ "      (   _    _ _\\\r\n"
+					+ "      =`-(_)--(_)-'\r\n"
+					+ "");
+			System.out.println("==============================");
+			System.out.println("Escolha uma opção");
+			System.out.println("1. Ligar o carro");
+			System.out.println("2. Deligar o carro");
+			System.out.println("3. Acelerar ");
+			System.out.println("4. Diminuir velociade");
+			System.out.println("5. Virar paraa esquerda/direita");
+			System.out.println("6. Verificar velociade");
+			System.out.println("7. Trocar a marcha");
+			System.out.println("0.sair");
+			option = scanner.nextInt();
+			switch(option) {
+			case 1 -> ligarCarro();
+			case 2 -> desligarCarro();
+			case 0 -> option = 0;
+			}
+			
+		}while(option != 0);
+	}
+	public static void desligarCarro() {
+		carro.desligar();
+	}
+	public static void ligarCarro() {
+		carro.ligar();
+	}
+}

@@ -1,0 +1,38 @@
+package carro;
+
+public class Carro {
+	private boolean ingnicao = false;
+	private int velocidade = 0;
+	private int marcha = 0;
+	
+	public Carro(boolean ingnicao, int velocidade, int marcha) {
+		this.ingnicao = ingnicao;
+		this.velocidade = velocidade;
+		this.marcha = marcha;
+	}
+	
+	public boolean getIngnicao(){
+		return ingnicao;
+	}
+	
+	public int getVelocidade() {
+		return velocidade;
+	}
+	
+	public int getMarcha() {
+		return marcha;
+	}
+	
+	public void setIngnicao(boolean ingnicao) {
+		this.ingnicao = ingnicao;
+	}
+	
+	public void setMarcha(int marcha) {
+		this.marcha = marcha;
+	}
+	
+	public void setVelocidade(int velocidade) {
+		this.velocidade = velocidade;
+	}
+	
+}

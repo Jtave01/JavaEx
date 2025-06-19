@@ -1,0 +1,83 @@
+package machine;
+import pet.Pet;
+public class PetMachine {
+	private boolean clean = true;
+	private int water = 30;
+	private int shampoo = 10;
+	private Pet pet;
+	
+	public int getWater() {
+		return water;
+	}
+	public int getShampoo(){
+	 return shampoo;
+	}	
+	
+	
+	public void takAShower() {
+		if(this.pet == null) {
+			System.out.println("Place the pet in the machine, to start the shower");
+			return;	
+		}
+		
+		pet.setCelan(true);
+		System.out.println("The pet is" + " " + pet.getName() + " " + "is clean");
+		this.water -= 10;
+		this.shampoo -=2;
+		clean =false;
+	}
+	
+	public void addWater() {
+		if(water ==30 ) {
+			System.out.println("the watter capacity is at maximum");
+			return;
+		}
+		water +=2;
+		
+	}
+	
+	public void addShampoo() {
+		if(shampoo ==30 ) {
+			System.out.println("the shampoo capacity is at maximum");
+			return;
+		}
+		shampoo +=2;
+	}
+	
+	public boolean hasPet() {
+		return pet != null;
+	}
+	
+	public void setPet(Pet pet) {
+		if(!this.clean) {
+			System.out.println("The machine is not clean");
+			return;
+		}
+		
+		if(hasPet()) {
+			System.out.println("The pet" + " " + this.pet.getName() + "on the machine at this moment" );
+			return;
+		}
+		this.pet = pet;
+	}
+	
+	public void removePet() {
+		if(!this.pet.isClean()) {
+			System.out.println("The pet" + " " + this.pet.getName() + " " + "is not clean");
+		}else {
+			System.out.println("The pet" + " " + this.pet.getName() + " " + "exit");
+			this.pet = null;
+		}
+		
+		
+	}
+	public void wash() {
+		this.water -= 10;
+		this.shampoo -=2;
+		this.clean = true;
+		System.out.println("The machine is clean");
+	}
+	
+	
+	
+}

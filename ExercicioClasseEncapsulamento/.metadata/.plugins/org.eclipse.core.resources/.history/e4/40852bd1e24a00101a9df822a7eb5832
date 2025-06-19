@@ -1,0 +1,33 @@
+package main;
+import contaBancaria.ContaBancaria;
+import java.util.Scanner;
+public class Main {
+	private final static ContaBancaria contaBancaria = new ContaBancaria();
+	private final static Scanner scanner = new Scanner(System.in);
+	public static void main (String[] args) {
+		
+		var option = -1;
+		
+		do {
+			System.out.println("=================");
+			System.out.println("ESCOLHA UMA OPÇÃO");
+			System.out.println("1. Consultar saldo");
+			System.out.println("2. Consultar cheque especial");
+			System.out.println("3. Depositar um dinheiro");
+			System.out.println("4. Scar um dinheiro");
+			System.out.println("5. pagar um boleto");
+			System.out.println("6. Verificcar se a conta esta usando cheque especial");
+			option = scanner.nextInt();
+			switch(option) {
+			case ->1
+			case 
+			case
+			case
+			case
+			case
+			}
+			
+		}while(option != 0);
+	}
+
+}

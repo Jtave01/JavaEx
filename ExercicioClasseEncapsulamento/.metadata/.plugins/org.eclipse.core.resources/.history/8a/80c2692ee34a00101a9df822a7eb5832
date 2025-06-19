@@ -1,0 +1,20 @@
+package contaBancaria;
+
+public class ContaBancaria {
+	private double saldo = 00.00;
+	private final double boleto =100.00;
+	private double chequeEspecial = 00.00;
+	
+	public  ContaBancaria(double saldo, double chequeEspecial) {
+		this.saldo = saldo;
+		this.chequeEspecial = chequeEspecial;
+	}
+	public double getSaldo() {
+		return saldo;
+	}
+	public double getChequeEspecial() {
+		return chequeEspecial;
+	}
+	
+
+}

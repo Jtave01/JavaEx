@@ -1,0 +1,60 @@
+package contaBancaria;
+import java.util.Scanner;
+public class ContaBancaria {
+	private final Scanner scanner = new Scanner(System.in);
+	private double saldo = 00.00;
+	private double boleto =100.00;
+	private double chequeEspecial = 00.00;
+	 
+	
+	public  ContaBancaria(double saldo, double chequeEspecial, double boleto) {
+		this.saldo = saldo;
+		this.chequeEspecial = chequeEspecial;
+		this.boleto = boleto;
+	}
+	
+	
+	public ContaBancaria() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+	public double getChequeEspecial() {
+		return chequeEspecial;
+	}
+	
+	public double getBoleto() {
+		return boleto;
+	}
+	public void setChequeEspecial(double chequeEspecial) {
+		this.chequeEspecial = chequeEspecial;
+	}
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+		
+	}
+	public void setCheque(double chequeEspecial) {
+		this.chequeEspecial = chequeEspecial;
+		
+	}
+
+	
+	public void pay() {
+		double val;
+		System.out.println("Digite o valor do boleto");
+		val = scanner.nextDouble();
+		
+	}
+	
+	public void addValor() {
+		double deposito;
+		System.out.println("Digite o valor do deposito");
+		deposito = scanner.nextDouble();
+		setSaldo(deposito);
+		
+	}
+	
+	
+}

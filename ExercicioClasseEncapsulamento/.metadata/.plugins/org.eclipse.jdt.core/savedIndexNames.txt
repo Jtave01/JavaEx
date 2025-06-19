@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Progamas_pessoais\ExerciciosJava\ExercicioClasseEncapsulamento\.metadata\.plugins\org.eclipse.jdt.core
+586650247.index
+1865797976.index
+2538789529.index

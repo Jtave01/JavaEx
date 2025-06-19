@@ -1,0 +1,56 @@
+package machine;
+import pet.Pet;
+public class PetMachine {
+	private boolean clean;
+	private int water;
+	private int shampoo;
+	private Pet pet;
+	
+	public int getWater() {
+		return water;
+	}
+	public int getShampoo(){
+	 return shampoo;
+	}	
+	
+	
+	public void takAShower() {
+		if(this.pet == null) {
+			System.out.println("Place the pet in the machine, to start the shower");
+			return;	
+		}
+		pet.setCelan(true);
+		System.out.println("The pet is" + " " + pet.getName() + " " + "is clean");		
+	}
+	
+	public void addWatter() {
+		if(water ==30 ) {
+			System.out.println("the watter capacity is at maximum");
+			return;
+		}
+		water +=2;
+	}
+	
+	public void addShampoo() {
+		if(shampoo ==30 ) {
+			System.out.println("the shampoo capacity is at maximum");
+			return;
+		}
+		shampoo +=2;
+	}
+	
+	public boolean hasPet() {
+		return pet != null;
+	}
+	
+	public void setPetMachine(Pet pet) {
+		if(hasPet()) {
+			System.out.println("The pet" + " " + this.pet.getName() + "on the machine at this moment" );
+			return;
+		}
+		this.pet = pet;
+	}
+	
+	
+	
+}

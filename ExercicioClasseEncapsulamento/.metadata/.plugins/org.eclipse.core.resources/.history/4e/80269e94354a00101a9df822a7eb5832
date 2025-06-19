@@ -1,0 +1,47 @@
+package main;
+import machine.PetMachine;
+import pet.Pet;
+import java.util.Scanner;
+public class Main {
+	private final static Scanner scanner = new Scanner(System.in);
+	private final static PetMachine petMachine = new PetMachine();
+	
+	public static void main(String [] args) {
+		var option = -1;
+		do {
+			System.out.println("====Choose an opition===");
+			System.out.println("1- shower pet");
+			System.out.println("2- watter for machine");
+			System.out.println("3- shampoo for machine");
+			System.out.println("4- check water");
+			System.out.println("5- check shampoo");
+			System.out.println("6- check pet in shower");
+			System.out.println("7- Place the pet in the machine");
+			System.out.println("8- Remove pet the machine");
+			System.out.println("9- Clear the machine");
+			System.out.println("0- Exit");
+			option = scanner.nextInt();
+			switch( option) {
+				case 7 -> setPetInPetMachine();
+				case 8 -> getPetTheMachine();
+			}
+		
+		}while(option != 0);
+		
+		
+}
+	public static  void setPetInPetMachine() {
+		var name = "";
+		while(name == null || name.isEmpty()) {
+			System.out.println("Pet name?");
+			name = scanner.next();	
+		}
+		var pet = new Pet(name);
+		petMachine.setPet(pet);
+		System.out.println("The pet" + " " + pet.getName() + " " + "has been added");
+	}
+	
+	public static void getPetTheMachine() {
+		petMachine.removePet();
+	}
+}

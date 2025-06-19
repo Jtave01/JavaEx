@@ -1,0 +1,131 @@
+package carro;
+
+//import motorista.carro;
+
+public class Carro {
+	private boolean ingnicao = false;
+	private int velocidade = 0;
+	private int marcha = 0;
+
+	public Carro() {
+		
+	}
+	
+	public Carro(boolean ingnicao, int velocidade, int marcha) {
+		this.ingnicao = ingnicao;
+		this.velocidade = velocidade;
+		this.marcha = marcha;
+	}
+
+	public boolean getIngnicao(){
+		return ingnicao;
+	}
+	
+	public int getVelocidade() {
+		return velocidade;
+	}
+	
+	public int getMarcha() {
+		return marcha;
+	}
+	
+	public void setIngnicao(boolean ingnicao) {
+		this.ingnicao = ingnicao;
+	}
+	
+	public void setMarcha(int marcha) {
+		this.marcha = marcha;
+	}
+	
+	public void setVelocidade(int velocidade) {
+		this.velocidade = velocidade;
+	}
+	
+	public void desligar() {
+		if( getIngnicao() == false) {
+			System.out.println("O carro ja esta desligado");
+		}
+		if(getIngnicao() == true){
+			setIngnicao(false);
+			System.out.println("DESLIGANDO . .  . . . .");
+		}
+	}
+		public void ligar() {
+			if( getIngnicao() == true) {
+				System.out.println("O carro ja esta ligado");
+			}
+			if(getIngnicao() == false) {
+				setIngnicao(true);
+				System.out.println("LIGANDO VRUM VRUM VRUM . .  . . . .");
+		}
+	}
+	public  void subirMarcha() {
+		if(this.marcha >= 0 && this.marcha <6) {
+			this.marcha ++;
+		}
+		else {
+			System.out.println("O carro ja esta na sexta marcha");
+		}
+	}
+	
+	public void descerMarcha() {
+		if(this.marcha  != 0 ) {
+			this.marcha --;
+		}
+		else {
+			System.out.println("O carro ja esta no ponto morto");
+		}
+	}
+	
+	public void acelerar() {
+		if(this.marcha == 1 && this.velocidade >= 0 && this.velocidade <=20) {
+			this.velocidade++;
+			System.out.println("Voce esta a " + " " + getVelocidade() + " " +  "KM por hora" );
+			}
+		
+		else if(this.marcha == 2 && this.velocidade >= 21 && this.velocidade <=40) {	
+		this.velocidade++;
+				System.out.println("Voce esta a " + " " + getVelocidade() + " " +  "KM por hora" );
+			}
+	
+		else if(this.marcha == 3 && this.velocidade >= 41 && this.velocidade <=60) {
+			this.velocidade++;
+				System.out.println("Voce esta a " + " " + getVelocidade() + " " +  "KM por hora" );
+			} 
+		else if(this.marcha == 4 && this.velocidade >= 61 && this.velocidade <=80) {
+			this.velocidade++;
+				System.out.println("Voce esta a " + " " + getVelocidade() + " " +  "KM por hora" );
+			}
+	
+		else if(this.marcha == 5 && this.velocidade >= 81 && this.velocidade <=100 ) {
+			this.velocidade++;
+				System.out.println("Voce esta a " + " " + getVelocidade() + " " +  "KM por hora" );
+			}
+	
+		else if(this.marcha == 6 && this.velocidade >= 101 && this.velocidade <= 120 ) {
+			this.velocidade++;
+				System.out.println("Voce esta a " + " " + getVelocidade() + " " +  "KM por hora" );
+			}
+		else {
+				System.out.println("TROQUE DE MARCHA");
+			}
+		}
+	
+	public void diminuirVelocidade() {
+		if(this.velocidade <=0) {
+			System.out.println("Não e possivel diminuir mais");
+		}
+		else {
+			this.velocidade --;
+		}
+	}
+	
+	public void virar() {
+		if(this.velocidade >= 1 && this.velocidade <= 40) {
+		System.out.println("Virando");
+		}
+	}
+	
+
+	
+}

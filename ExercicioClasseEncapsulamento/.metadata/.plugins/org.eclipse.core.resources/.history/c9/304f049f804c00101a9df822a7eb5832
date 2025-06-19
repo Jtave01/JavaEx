@@ -1,0 +1,9 @@
+package motorista;
+import carro.Carro;
+import java.util.Scanner;
+public class Motorista {
+	private final static Scanner scanner = new Scanner(System.in);
+	private final static Carro carro = new Carro();
+	
+	
+}
