@@ -38,6 +38,7 @@ public class Main {
 			}			
 		}while(option !=0);
 	}
+<<<<<<< HEAD
 	public static Food taxForFood() {
 		return new Food(1.0);
 	}
@@ -48,6 +49,18 @@ public class Main {
 		return new Clothing(2.5);
 	}
 	public static Culture taxCulture() {
+=======
+	public static TaxApplication taxForFood() {
+		return new Food(1.0);
+	}
+	public static TaxApplication taxHealthBeing() {
+		return new HealthBeing(1.5);
+	}
+	public static TaxApplication taxClothing() {
+		return new Clothing(2.5);
+	}
+	public static TaxApplication taxCulture() {
+>>>>>>> 3902160 (Enviando Alterações)
 		return new Culture(4.0);
 	}
 	public static TaxApplication tax() {
